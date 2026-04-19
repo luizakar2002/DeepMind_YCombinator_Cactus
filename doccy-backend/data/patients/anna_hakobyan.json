@@ -1,0 +1,33 @@
+{
+  "id": "anna_hakobyan",
+  "name": "Anna Hakobyan",
+  "age": 47,
+  "sex": "female",
+  "blood_type": "A+",
+  "chief_complaint": "Persistent fatigue, shortness of breath on exertion, and occasional chest tightness for the past 3 weeks.",
+  "diagnoses": [
+    "Type 2 Diabetes Mellitus",
+    "Hypertension",
+    "Hypothyroidism"
+  ],
+  "medications": [
+    { "name": "Metformin",    "dose": "1000mg", "frequency": "twice daily" },
+    { "name": "Lisinopril",   "dose": "10mg",   "frequency": "once daily"  },
+    { "name": "Levothyroxine","dose": "75mcg",  "frequency": "once daily, fasting" },
+    { "name": "Aspirin",      "dose": "81mg",   "frequency": "once daily"  }
+  ],
+  "allergies": [
+    { "substance": "Penicillin",  "reaction": "anaphylaxis"      },
+    { "substance": "Sulfonamides","reaction": "severe rash"       },
+    { "substance": "Codeine",     "reaction": "nausea, vomiting"  }
+  ],
+  "lab_results": [
+    { "test": "HbA1c",       "value": "8.1",  "unit": "%",       "date": "2026-03-10", "flag": "HIGH" },
+    { "test": "TSH",         "value": "6.8",  "unit": "mIU/L",   "date": "2026-03-10", "flag": "HIGH" },
+    { "test": "eGFR",        "value": "58",   "unit": "mL/min",  "date": "2026-03-10", "flag": "LOW"  },
+    { "test": "Hemoglobin",  "value": "10.2", "unit": "g/dL",    "date": "2026-03-10", "flag": "LOW"  },
+    { "test": "BNP",         "value": "210",  "unit": "pg/mL",   "date": "2026-03-10", "flag": "HIGH" },
+    { "test": "LDL",         "value": "142",  "unit": "mg/dL",   "date": "2026-03-10", "flag": "HIGH" }
+  ],
+  "notes": "Patient reports poor sleep and increased stress at work. Non-smoker. Occasional alcohol. Family history of coronary artery disease (father, MI at 61). Last echo 18 months ago showed preserved EF."
+}

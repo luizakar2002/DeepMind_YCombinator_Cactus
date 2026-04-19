@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-slide-in {
+    animation: slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.2s ease both;
+  }
+  .animate-skeleton {
+    animation: skeleton 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes skeleton {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@media print {
+  /* Hide everything except the summary overlay */
+  body > #root > * {
+    display: none;
+  }
+  /* The summary overlay is fixed — make it the only visible thing */
+  .fixed.inset-0 {
+    display: block !important;
+    position: static !important;
+  }
+}

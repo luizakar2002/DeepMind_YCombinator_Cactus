@@ -1,0 +1,112 @@
+{
+  "red_flag_symptoms": [
+    {
+      "id": "rfs_chest_pain",
+      "pattern": "chest",
+      "level": "critical",
+      "message": "Chest pain/tightness mentioned — rule out ACS, PE, aortic dissection."
+    },
+    {
+      "id": "rfs_syncope",
+      "pattern": "syncope",
+      "level": "critical",
+      "message": "Syncope reported — consider cardiac arrhythmia, vasovagal, or neurological cause."
+    },
+    {
+      "id": "rfs_hemoptysis",
+      "pattern": "coughing blood",
+      "level": "critical",
+      "message": "Hemoptysis — consider TB, malignancy, PE."
+    },
+    {
+      "id": "rfs_dyspnea",
+      "pattern": "shortness of breath",
+      "level": "warning",
+      "message": "Dyspnea on exertion — consider cardiac or pulmonary cause given BNP elevation."
+    },
+    {
+      "id": "rfs_breathless",
+      "pattern": "breathless",
+      "level": "warning",
+      "message": "Breathlessness — consider cardiac or pulmonary cause given BNP elevation."
+    },
+    {
+      "id": "rfs_sudden_weakness",
+      "pattern": "sudden weakness",
+      "level": "critical",
+      "message": "Sudden weakness — rule out stroke (FAST assessment)."
+    },
+    {
+      "id": "rfs_vision_loss",
+      "pattern": "vision loss",
+      "level": "critical",
+      "message": "Acute vision loss — ophthalmology urgent review."
+    },
+    {
+      "id": "rfs_severe_headache",
+      "pattern": "worst headache",
+      "level": "critical",
+      "message": "Thunderclap headache — rule out subarachnoid haemorrhage."
+    },
+    {
+      "id": "rfs_palpitations",
+      "pattern": "palpitation",
+      "level": "warning",
+      "message": "Palpitations with known hypertension — consider ECG."
+    },
+    {
+      "id": "rfs_weight_loss",
+      "pattern": "weight loss",
+      "level": "warning",
+      "message": "Unexplained weight loss — screen for malignancy, uncontrolled diabetes (HbA1c 8.1%)."
+    }
+  ],
+  "symptom_combinations": [
+    {
+      "id": "combo_acs",
+      "patterns": ["chest", "arm"],
+      "level": "critical",
+      "message": "Chest pain + arm symptoms — high suspicion for ACS. Consider immediate ECG."
+    },
+    {
+      "id": "combo_dvt_pe",
+      "patterns": ["leg pain", "shortness of breath"],
+      "level": "critical",
+      "message": "Leg pain + dyspnea — consider DVT/PE. Wells score warranted."
+    },
+    {
+      "id": "combo_cardiac_triad",
+      "patterns": ["fatigue", "shortness of breath", "chest"],
+      "level": "warning",
+      "message": "Fatigue + dyspnea + chest symptoms — cardiac decompensation possible given BNP 210."
+    }
+  ],
+  "drug_interactions": [
+    {
+      "id": "di_aspirin_ibuprofen",
+      "drugs": ["aspirin", "ibuprofen"],
+      "level": "warning",
+      "message": "Aspirin + Ibuprofen: Ibuprofen may competitively inhibit Aspirin's antiplatelet effect and increases GI bleed risk."
+    },
+    {
+      "id": "di_metformin_egfr",
+      "drugs": ["metformin"],
+      "requires_flag": "eGFR_LOW",
+      "level": "warning",
+      "message": "Metformin with eGFR 58 mL/min — approaching threshold for dose reduction (hold if eGFR <45). Monitor renal function."
+    },
+    {
+      "id": "di_nsaid_ckd",
+      "drug_classes": ["ibuprofen", "naproxen", "diclofenac", "celecoxib"],
+      "requires_flag": "eGFR_LOW",
+      "level": "critical",
+      "message": "NSAID use with reduced eGFR (58 mL/min) — NSAIDs can acutely worsen renal function. Consider alternatives."
+    },
+    {
+      "id": "di_levothyroxine_calcium",
+      "drugs": ["levothyroxine", "calcium"],
+      "level": "info",
+      "message": "Levothyroxine + Calcium: calcium supplements reduce levothyroxine absorption — separate by 4 hours."
+    }
+  ]
+}
