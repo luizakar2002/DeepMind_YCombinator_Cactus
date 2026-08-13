@@ -1,4 +1,4 @@
-# Doccy Co-pilot
+# YC x DeepMind x Cactus
 
 > A real-time AI second opinion for doctors during live patient consultations — running on-device with surgical cloud escalation.
 
